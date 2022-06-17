@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100&family=Lexend+Deca:wght@200&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+body {
+    background: hsl(0, 0%, 95%);
+    color: hsl(0, 0%, 95%);
+    font-size: 15px;
+}
+
+.wrapper {
+    width: 50%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 3em;
+    margin: 20px 0;
+}
+.h1{
+    width: 100%;
+    max-width: 15em;
+}
+.p{
+    width: 100%;
+    max-width: 13em;
+    height: 12em;
+    /* border: 2px solid; */
+}
+.input{
+    width: 100%;
+    /* margin-top: ; */
+    max-width: 15em;
+}
+p {
+    color: hsla(0, 0%, 95%, 0.805);
+    text-align: left;
+    line-height: 30px;
+}
+
+
+.container {
+    display: flex;
+}
+
+.box {
+    height: 25em;
+    /* max-height: 25em; */
+    padding: 70px 40px;
+    margin-bottom: 50px;
+}
+
+.one {
+    border-radius: 10px 0 0 10px;
+    background: hsl(31, 77%, 52%);
+}
+
+.two {
+    background: hsl(184, 100%, 22%)
+}
+
+.three {
+    border-radius: 0 10px 10px 0;
+    background: hsl(179, 100%, 13%);
+}
+
+
+input {
+    border: 0;
+    margin-top: 40px;
+    border-radius: 50px;
+    width: 120px;
+    height: 40px;
+    
+}
+
+.one input {
+    color: hsl(31, 77%, 52%);
+    font-weight: bold;
+}
+
+.two input {
+    color: hsl(184, 100%, 22%);
+    font-weight: bold;
+}
+
+.three input {
+    color: hsl(179, 100%, 13%);
+    font-weight: bold;
+}
+
+.grid:hover, .flex:hover, .button:hover {
+    border: 2px solid white;
+    color: white;
+    background: none;
+    cursor: pointer;
+}
+
+
+a {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+}
+
+.choose {
+    margin-left: 18em;
+    padding-top: 0.5em;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+    background: hsla(181, 94%, 28%, 0.841);
+    width: 17em;
+    text-align: center;
+    height: 2.5em;
+    font-weight:bolder;
+    border-radius: 0.3em;
+}
+
+.flex,
+.grid {
+    cursor: pointer;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background: white;
+    color: black;
+}
+
+.flex {
+    margin-left: 1em;
+}
+
+.grid {
+    margin-right: 1em;
+}
+
+.body{
+    background: rgb(10, 18, 57);
+}
+.grid-container{
+    display: grid;
+    width: 100%;
+    max-width: 40em;
+    height: 100%;
+    min-height: 30em;
+    grid-template-columns: 0.5fr 0.3fr 0.5fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr;
+    grid-template-areas: 
+    'box1 box1 box2'
+    'box3 box4 box4'
+    'box3 box5 box5';
+    grid-gap: 0.8em;
+    margin: 2em 10em 0 10em;
+}
+
+.box1{
+    background: #ea5403;
+    grid-area: box1;
+}
+.box2{
+    background: #e08d08;
+    grid-area: box2;
+}
+.box3{
+    background: #33c633;
+    grid-area: box3;
+}
+.box4{
+    background: #5757d6e0;
+    grid-area: box4;
+}
+.box5{
+    background: #5757d6e0;
+    grid-area: box5;
+}
+
+@media (max-width: 800px) {
+
+    .container {
+        flex-direction: column;
+    } 
+
+    .wrapper {
+        margin-top: 5em;
+        margin-bottom: 5em;
+    }
+
+    .box {
+        width: 12em;
+        padding-top: 2em;
+        margin: auto;
+        height: 23em;
+        border-radius: 0;
+    }
+
+    input {
+        margin-top: 2em;
+    }
+
+    .choose {
+        /* margin-right: 100em; */
+        margin: auto;
+        margin-bottom: 1em;
+    }
+    
+    .grid-container{
+        display: grid;
+        width: 100%;
+        max-width: 18em;
+        height: 80vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        'box1'
+        'box2'
+        'box3'
+        'box4'
+        'box5';
+    }
+}
+
+@media (max-width: 600px){
+    .grid-container{
+        display: grid;
+        height: 80vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        'box5'
+        'box4'
+        'box3'
+        'box2'
+        'box1';
+        grid-gap: 1em;
+    }   
+    .box4{
+        background: #9999abe0;
+        grid-area: box4;
+    }
+}
